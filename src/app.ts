@@ -1,7 +1,7 @@
 import express, { Express } from 'express';
-import { AppServer } from '../src/setupServer';
-import dataBaseConnection from './setupDatabase';
-import { config } from './config';
+import { AppServer } from '@root/setupServer';
+import dataBaseConnection from '@root/setupDatabase';
+import { config } from '@root/config';
 
 class Application {
   async initialize() {
@@ -14,6 +14,7 @@ class Application {
 
   private loadConfig() {
     config.validateConfig();
+    config.cloudinaryConfig();
   }
 }
 
