@@ -35,8 +35,6 @@ class Config {
     return bunyan.createLogger({ name, level: 'debug' });
   }
 
-
-
   async validateConfig(): Promise<boolean> {
     for (const [key, value] of Object.entries(this)) {
       if (value === undefined) {
