@@ -2,14 +2,14 @@ import HTTP_STATUS from 'http-status-codes';
 
 export interface IErrorResponse {
   message: string;
-  statusCode: string;
+  statusCode: number;
   status: string;
   serializeErrors(): IError;
 }
 
 export interface IError {
   message?: string;
-  statusCode?: string;
+  statusCode?: number;
   status?: string;
 }
 
@@ -24,8 +24,8 @@ export abstract class CustomError extends Error {
   serializeErrors(): IError {
     return {
       message: this.message,
-      statusCode: this.message,
-      status: this.message
+      statusCode: this.statusCode,
+      status: this.status
     };
   }
 }

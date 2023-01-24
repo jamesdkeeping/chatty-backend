@@ -35,8 +35,6 @@ class Config {
     return bunyan.createLogger({ name, level: 'debug' });
   }
 
-
-
   async validateConfig(): Promise<boolean> {
     for (const [key, value] of Object.entries(this)) {
       if (value === undefined) {
@@ -53,7 +51,6 @@ class Config {
       api_secret: this.CLOUD_API_SECRET
     });
   }
-
 }
 
 export const config: Config = new Config();
