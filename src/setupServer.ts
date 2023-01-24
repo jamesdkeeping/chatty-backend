@@ -15,7 +15,6 @@ import { config } from '@root/config';
 import applicationRoutes from '@root/routes';
 import { CustomError, IErrorResponse } from '@global/helpers/error-handlers';
 
-
 const SERVER_PORT = 5000;
 const log: Logger = config.createLogger('server');
 
@@ -111,6 +110,8 @@ export class AppServer {
     });
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  private socketIOConnections(io: Server) {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
+  private socketIOConnections(io: Server) {
+    log.info('socketIOConnections');
+  }
 }

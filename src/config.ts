@@ -51,7 +51,6 @@ class Config {
       api_secret: this.CLOUD_API_SECRET
     });
   }
-
 }
 
 export const config: Config = new Config();

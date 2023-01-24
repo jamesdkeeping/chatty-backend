@@ -10,11 +10,11 @@ class RedisConnection extends BaseCache {
   }
 
   async connect(): Promise<void> {
-      try {
-        await this.client?.connect();
-      } catch (error) {
-        log.error(error);
-      }
+    try {
+      await this.client?.connect();
+    } catch (error) {
+      log.error(error);
+    }
   }
 }
 
